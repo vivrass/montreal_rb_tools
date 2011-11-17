@@ -1,0 +1,30 @@
+= form_for(@talk) do |f|
+  - if @talk.errors.any?
+    #error_explanation
+      %h3
+        = pluralize(@talk.errors.count, "error")
+        prohibited this talk from being saved:
+
+      %ul
+        - @talk.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+
+  .field
+    = f.label :email
+    = f.email_field :email
+
+
+  .field
+    = f.label :title
+    = f.text_field :title, size: 50
+
+  .field
+    = f.label :description
+    = f.text_area :description, cols: 60
+
+  .actions
+    = f.submit

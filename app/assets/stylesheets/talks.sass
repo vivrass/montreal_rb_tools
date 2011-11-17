@@ -1,27 +1,27 @@
-#notice
-  color: green
+@import "mixins"
 
-.field_with_errors
-  padding: 2px
-  background-color: red
-  display: table
+.field
+  padding: 3px 0
+  label
+    width: 100px
+    float: left
 
-#error_explanation
-  width: 450px
-  border: 2px solid red
-  padding: 7px
-  padding-bottom: 0
-  margin-bottom: 20px
-  background-color: #f0f0f0
-  h2
-    text-align: left
-    font-weight: bold
-    padding: 5px 5px 5px 15px
-    font-size: 12px
-    margin: -7px
-    margin-bottom: 0px
-    background-color: #c00
-    color: #fff
-  ul li
-    font-size: 12px
-    list-style: square
+  .action
+    input
+      padding: 10px
+
+.talk
+  @include rounded
+  background-color: #19273A
+  border: 1px solid #fff
+  padding: 10px
+  margin-bottom: 15px
+  .title
+    font-size: 24px
+  .presenter
+    font-size: 14px
+    padding: 3px 0 5px 0
+    color: #ccc
+  .description
+    border-top: 1px solid #666
+    padding-top: 5px

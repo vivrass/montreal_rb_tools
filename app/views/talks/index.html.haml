@@ -1,0 +1,9 @@
+%h2 Proposed talks list
+
+- @talks.each do |talk|
+  .talk
+    .title= talk.title
+    .presenter= talk.name
+    .description= talk.description
+
+= link_to 'New Talk', new_talk_path
