@@ -9,7 +9,7 @@ namespace :heroku do
 
   desc "Deploy to heroku"
   task :deploy do
-    update_keys
+    Rake::Task["heroku:update_keys"]
 
     puts "Pushing to server"
     `git push heroku master`
