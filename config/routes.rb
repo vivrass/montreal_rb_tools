@@ -8,6 +8,7 @@ MontrealRbTools::Application.routes.draw do
 
   resources :users, :only => [:edit]
   match '/auth/twitter/callback', to: 'users#create'
+  match '/auth/failure', to: 'users#failure'
 
   root :to => 'talks#index'
 end

@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
 
   has_many :talks, :foreign_key => :talker_id
 
-  def find_or_create_from_auth_hash(auth_hash)
+  def self.find_or_create_from_auth_hash(auth_hash)
     twitter_user = UsersTwitter.find_by_twitter_id(auth_hash.params[:user_id])
     if twitter_user.nil?
       user = User.create!
@@ -17,7 +17,5 @@ class User < ActiveRecord::Base
     else
       user = User.find_by_id(twitter_user.id)
     end
-
-    user
   end
 end
