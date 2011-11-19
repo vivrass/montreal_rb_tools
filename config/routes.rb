@@ -6,8 +6,8 @@ MontrealRbTools::Application.routes.draw do
   end
   resources :talks, :only => [:index, :new, :create]
 
-  # FIXME : Change #test for #create"
-  match '/auth/twitter/callback', to: 'sessions#test'
+  resources :users, :only => [:edit]
+  match '/auth/twitter/callback', to: 'users#create'
 
   root :to => 'talks#index'
 end
