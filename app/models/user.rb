@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
-  belongs_to :users_twitter, :as => :twitter_user
-  belongs_to :users_fake,    :as => :fake_user
+  belongs_to :users_twitter, :foreign_key => :id
+  belongs_to :users_fake, :foreign_key => :id
 
   has_many :talks, :foreign_key => :talker_id
 

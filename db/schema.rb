@@ -11,13 +11,42 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111117005803) do
+ActiveRecord::Schema.define(:version => 20111119193034) do
+
+  create_table "roles", :force => true do |t|
+    t.string "name"
+  end
 
   create_table "talks", :force => true do |t|
-    t.string   "name"
+    t.integer  "talker_id"
     t.string   "title"
-    t.string   "email"
     t.text     "description"
+    t.integer  "created_by_id"
+    t.integer  "updated_by_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.integer  "role_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users_fakes", :force => true do |t|
+    t.string   "picture_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users_twitters", :force => true do |t|
+    t.string   "screen_name"
+    t.string   "picture_url"
+    t.integer  "twitter_id"
+    t.string   "oauth_token"
+    t.string   "oauth_token_secret"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
