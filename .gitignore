@@ -1,5 +1,6 @@
-.rvmrc
 .bundle
+.env_key.sh
+.rvmrc
 db/*.sqlite3
 log/*
 tmp/
