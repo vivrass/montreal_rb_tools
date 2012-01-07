@@ -8,9 +8,17 @@
   %body
     .header
       .container_16
-        .grid_16
+        .grid_12
           %h1 Montreal.rb
           .tagline Montreal's Ruby Community
+        .grid_4
+          #login
+            .bottom
+              - if user_signed_in?
+                = link_to "Sign out", sign_out_path
+              - else
+                = link_to "Sign in", sign_in_path
+                = link_to "Sign up", sign_up_path
     .main
       .container_16
         .messages

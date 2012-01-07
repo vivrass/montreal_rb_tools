@@ -1,3 +1,5 @@
+@import "mixins"
+
 body
   background-color: #2e496d
   color: #fff
@@ -56,3 +58,18 @@ a
   ul li
     font-size: 12px
     list-style: square
+
+#login
+  padding-top: 40px
+  text-align: right
+  a
+    font-size: 90%
+    font-weight: none
+    text-decoration: none
+    padding: 5px 10px
+    color: #ffc4be
+    background: #7f0f14
+    @include rounded
+    border: 1px solid #333
+    &:hover
+      background: darken(#7f0f14, 10%)
