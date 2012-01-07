@@ -1,3 +1,4 @@
+=begin
 Rails.application.config.middleware.use OmniAuth::Builder do
   if ENV['MONTREALRB_CONSUMER_KEY'].blank? || ENV['MONTREALRB_CONSUMER_SECRET'].blank?
     raise "Environment keys are not loaded"
@@ -5,3 +6,4 @@ Rails.application.config.middleware.use OmniAuth::Builder do
 
   provider :twitter, ENV['MONTREALRB_CONSUMER_KEY'], ENV['MONTREALRB_CONSUMER_SECRET']
 end
+=end

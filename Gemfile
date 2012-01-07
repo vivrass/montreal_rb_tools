@@ -10,7 +10,7 @@ gem 'haml'
 
 gem 'heroku'
 gem 'taps'
-gem 'omniauth-twitter'
+gem 'devise'
 
 group :assets do
   gem 'sass-rails',   '~> 3.1.4'

@@ -1,12 +1,6 @@
-# Ensures we use the proper gemset and ruby version for each rails app
-# http://mathieuberube.net/blog/2011/01/10/gemsets-and-rvmrc-ruby-gem-management-made-easy/
-
-# create the gemset if it does not exist
 rvm_gemset_create_on_use_flag=1
 
-# switch to default ruby version when exiting directory
 rvm_project_rvmrc_default=1
 
-# use ruby 1.9.2 with a specific gemset
-rvm ruby-1.9.2@bordeaux
+rvm ruby-1.9.3@montreal_rb_tools
 
