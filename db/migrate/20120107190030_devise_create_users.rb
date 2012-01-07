@@ -23,6 +23,8 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.timestamps
 
       t.integer :role_id
+      t.string :name
+      t.string :twitter_handle, unique: true
     end
 
     add_index :users, :email,                :unique => true

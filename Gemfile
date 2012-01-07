@@ -26,4 +26,6 @@ group :development, :test do
   gem 'simplecov'
   gem 'steak'
   gem 'launchy'
+
+  gem 'factory_girl_rails'
 end
